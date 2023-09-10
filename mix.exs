@@ -38,6 +38,7 @@ defmodule Digester.MixProject do
     ]
   end
 
+  # https://hexdocs.pm/ex_doc/Mix.Tasks.Docs.html
   defp docs() do
     [
       main: "Digester",
