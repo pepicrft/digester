@@ -1,6 +1,10 @@
 # Digester
 
 [![Digester](https://github.com/glossia/digester/actions/workflows/digester.yml/badge.svg)](https://github.com/glossia/digester/actions/workflows/digester.yml)
+[![Hex.pm](https://img.shields.io/hexpm/v/digester.svg)]()
+[![Hex.pm](https://img.shields.io/hexpm/dt/digester.svg)]()
+[![Hex.pm](https://img.shields.io/hexpm/dw/digester.svg)]()
+[![Hex.pm](https://img.shields.io/hexpm/dd/digester.svg)]()
 
 `Digester` provides a set of utilities for obtaining **digests** from Elixir primitives. Digests are useful to determine if a value has changed, for example, in a cache.
 
