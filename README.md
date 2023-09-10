@@ -5,7 +5,7 @@
 [![Hex.pm](https://img.shields.io/hexpm/dt/digester.svg)]()
 [![Hex.pm](https://img.shields.io/hexpm/dw/digester.svg)]()
 [![Hex.pm](https://img.shields.io/hexpm/dd/digester.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 `Digester` provides a set of utilities for obtaining **digests** from Elixir primitives. Digests are useful to determine if a value has changed, for example, in a cache.
 
