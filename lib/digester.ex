@@ -21,7 +21,7 @@ defmodule Digester do
 
   ## Examples
 
-      iex> digester = Digester.new()
+      iex> Digester.new()
       %Digester{algorithm: :sha256, digestables: []}
   """
   @spec new(opts :: new_opts) :: __MODULE__.t()
@@ -85,9 +85,9 @@ defmodule Digester do
   ## Examples
 
         iex> digester = Digester.new() |> Digester.combine("Hello") |> Digester.combine("World")
-        %Digester{algorithm: :sha256, digestables: ["e4b7fbbd1e5b4bae1e4b7fbbd1e5b4bae"]}
+        %Digester{algorithm: :sha256, digestables: ["78ae647dc5544d227130a0682a51e30bc7777fbb6d8a8f17007463a3ecd1d524", "185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969"]}
         iex> Digester.finalize(digester)
-        "e4b7fbbd1e5b4bae1e4b7fbbd1e5b4bae"
+        "c79df18bcbce0d9501007f33555ef01b9724f0a986b0dc7d872400bd33053a2e"
   """
   @spec finalize(digester :: __MODULE__.t()) :: String.t()
   def finalize(%__MODULE__{} = digester) do
