@@ -9,7 +9,7 @@ The package can be installed by adding `digester` to your list of dependencies i
 ```elixir
 def deps do
   [
-    {:digester, "~> 0.1.0"}
+    {:digester, "~> 0.2.0"}
   ]
 end
 ```
