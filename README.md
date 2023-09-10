@@ -1,5 +1,7 @@
 # Digester
 
+[![Digester](https://github.com/glossia/digester/actions/workflows/digester.yml/badge.svg)](https://github.com/glossia/digester/actions/workflows/digester.yml)
+
 `Digester` provides a set of utilities for obtaining **digests** from Elixir primitives. Digests are useful to determine if a value has changed, for example, in a cache.
 
 ## Installation
