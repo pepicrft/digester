@@ -1,6 +1,6 @@
 # Digester
 
-**TODO: Add description**
+`Digester` provides a set of utilities for obtaining **digests** from Elixir primitives. Digests are useful to determine if a value has changed, for example, in a cache.
 
 ## Installation
 
@@ -14,8 +14,4 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/digester>.
 
