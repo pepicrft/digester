@@ -5,10 +5,16 @@ defmodule DigesterTest do
   test "hashes strings deterministically" do
     # Given
     first =
-      Digester.new() |> Digester.combine("first") |> Digester.combine("second") |> Digester.finalize()
+      Digester.new()
+      |> Digester.combine("first")
+      |> Digester.combine("second")
+      |> Digester.finalize()
 
     second =
-      Digester.new() |> Digester.combine("first") |> Digester.combine("second") |> Digester.finalize()
+      Digester.new()
+      |> Digester.combine("first")
+      |> Digester.combine("second")
+      |> Digester.finalize()
 
     # When/Then
     assert first == second
@@ -16,8 +22,11 @@ defmodule DigesterTest do
 
   test "hashes booleans deterministically" do
     # Given
-    first = Digester.new() |> Digester.combine(true) |> Digester.combine(false) |> Digester.finalize()
-    second = Digester.new() |> Digester.combine(true) |> Digester.combine(false) |> Digester.finalize()
+    first =
+      Digester.new() |> Digester.combine(true) |> Digester.combine(false) |> Digester.finalize()
+
+    second =
+      Digester.new() |> Digester.combine(true) |> Digester.combine(false) |> Digester.finalize()
 
     # When/Then
     assert first == second

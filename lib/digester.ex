@@ -35,7 +35,10 @@ defmodule Digester do
   Note that the **order** of the digestables is important. If the same digestables are combined
   but in a different order, the resulting digest will be different.
   """
-  @spec combine(digester :: __MODULE__.t(), digestable :: atom | binary | struct | number | tuple | map) :: __MODULE__.t()
+  @spec combine(
+          digester :: __MODULE__.t(),
+          digestable :: atom | binary | struct | number | tuple | map
+        ) :: __MODULE__.t()
   def combine(digester, digestable)
 
   @spec combine(digester :: __MODULE__.t(), digestable :: binary) :: __MODULE__.t()
@@ -56,7 +59,8 @@ defmodule Digester do
 
   @spec combine(digester :: __MODULE__.t(), digestable :: list) :: __MODULE__.t()
   def combine(%__MODULE__{} = digester, digestable) when is_list(digestable) do
-    digestable |> Enum.reduce(digester, fn digestable, digester -> combine(digester, digestable) end)
+    digestable
+    |> Enum.reduce(digester, fn digestable, digester -> combine(digester, digestable) end)
   end
 
   @spec combine(digester :: __MODULE__.t(), digestable :: tuple) :: __MODULE__.t()

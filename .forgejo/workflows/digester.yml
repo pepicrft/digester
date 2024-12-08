@@ -1,0 +1,33 @@
+name: Digester
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+jobs:
+  test:
+    name: Test
+    runs-on: docker
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v4
+        with:
+          path: |
+            deps
+            _build
+          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-mix-
+      - run: git config --global user.email "website@pepicrft.me"
+      - run: git config --global user.name "website"
+      - run: curl https://mise.run | sh
+      - name: Cache Mise dependencies
+        id: cache-mise
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/mise
+          key: ${{ runner.os }}-mise-${{ hashFiles('.mise.toml') }}
+      - run: ~/.local/bin/mise install
+      - run: ~/.local/bin/mise x -- mix deps.get
+      - run: ~/.local/bin/mise x -- mix test
