@@ -34,7 +34,7 @@ defmodule Digester.MixProject do
     [
       name: "digester",
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/glossia/digester"}
+      links: %{"GitHub" => "https://codeberg.org/pepicrft/digester"}
     ]
   end
 
@@ -43,7 +43,7 @@ defmodule Digester.MixProject do
     [
       main: "Digester",
       extras: ["README.md"],
-      source_url: "https://github.com/glossia/digester/",
+      source_url: "https://codeberg.org/pepicrft/digester/",
       source_ref: @version
     ]
   end

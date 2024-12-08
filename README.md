@@ -1,6 +1,5 @@
 # Digester
 
-[![Digester](https://github.com/glossia/digester/actions/workflows/digester.yml/badge.svg)](https://github.com/glossia/digester/actions/workflows/digester.yml)
 [![Hex.pm](https://img.shields.io/hexpm/v/digester.svg)]()
 [![Hex.pm](https://img.shields.io/hexpm/dt/digester.svg)]()
 [![Hex.pm](https://img.shields.io/hexpm/dw/digester.svg)]()
