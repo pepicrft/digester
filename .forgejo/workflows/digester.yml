@@ -11,7 +11,7 @@ jobs:
     runs-on: docker
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: |
             deps
@@ -24,7 +24,7 @@ jobs:
       - run: curl https://mise.run | sh
       - name: Cache Mise dependencies
         id: cache-mise
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.local/share/mise
           key: ${{ runner.os }}-mise-${{ hashFiles('.mise.toml') }}
